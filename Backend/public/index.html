@@ -22,7 +22,6 @@
 
       form = document.getElementById("form");
       input = document.getElementById("input");
-      caht = document.getElementById("chat");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -37,6 +36,8 @@
 
       socket.on("chat message", function (msg) {
         console.log(msg);
+        chat = document.getElementById("chat");
+        chat.insertAdjacentHTML("beforeed", "<li>" + msg.text + "</li>");
       });
     </script>
   </body>
