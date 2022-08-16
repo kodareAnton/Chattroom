@@ -38,7 +38,10 @@
         chat = document.getElementById("chat");
 
         console.log("msg", msg);
-        chat.insertAdjacentHTML("beforeend", "<li>" + msg.text + "</li>");
+        chat.insertAdjacentHTML(
+          "beforeend",
+          "<li>" + "Anton: " + msg.text + "</li>"
+        );
       });
     </script>
   </body>
