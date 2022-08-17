@@ -8,18 +8,32 @@
     <h1>Express</h1>
     <p>Welcome to Socket</p>
 
-    <ul id="chat"></ul>
+    <form id="formUserName">
+      <label>Användarnamn</label>
+      <input id="userInput" />
+      <button>Skicka</button>
+    </form>
 
     <form id="form">
+      <label>Meddelande</label>
       <input id="input" />
-      <button>Send</button>
+      <button>Skicka</button>
     </form>
+
+    <ul id="chat"></ul>
 
     <script src="socket.io/socket.io.js"></script>
 
     <script>
-      var string = "hej";
       const socket = io();
+
+      formUserName = document.getElementById("formUserName");
+      userNameInput = document.getElementById("userNameInput");
+
+      formUserName.addEventListener("submit", function (e) {
+        e.preventDefault();
+        console.log("hej");
+      });
 
       form = document.getElementById("form");
       input = document.getElementById("input");
